@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+lembretes.db
+lembretes.db-shm
+lembretes.db-wal
+
 # User-specific files
 *.rsuser
 *.suo
