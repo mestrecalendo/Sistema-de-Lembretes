@@ -1,0 +1,45 @@
+@import '../../../styles/colors.scss';
+
+#container__lista {
+  width: 90%;
+  margin: 100px auto;
+
+  #container__lista__lembretes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    h3 {
+      font-weight: 800;
+      font-size: 20px;
+      color: $black;
+      padding: 20px 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      max-width: 250px;
+      gap: 30px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        word-wrap: break-word;
+        list-style-type: none;
+        background: $yellow;
+        border: 2px solid $black;
+        box-shadow: 0px 4px 0px $black;
+        border-radius: 16px;
+        padding: 24px;
+
+        button {
+          text-align: end;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -22,7 +22,11 @@ export class LembretesService {
     return this.http.post(this.url, novoLembrete, this.httpOptions)
   }
 
-  ListarLembretes() {
+  ListarLembretes(): Observable<any> {
+    return this.http.get(`${this.url}/list`, this.httpOptions)
+  }
+
+  ExcluirLembrete() {
 
   }
 

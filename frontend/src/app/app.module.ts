@@ -7,12 +7,14 @@ import { FormularioComponent } from './componentes/formulario/formulario.compone
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaLembretesComponent } from './componentes/lista-lembretes/lista-lembretes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    CabecalhoComponent
+    CabecalhoComponent,
+    ListaLembretesComponent
   ],
   imports: [
     BrowserModule,
