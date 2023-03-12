@@ -25,7 +25,14 @@ export class ListaLembretesComponent implements OnInit {
   }
 
   excluirLembrete(id: number) {
-    console.log(id)
-    this.ngOnInit();
+    this.lembretesService.ExcluirLembrete(id).subscribe({
+      next: () => {
+        this.ngOnInit();
+      },
+      error: (error: any) => {
+        console.log(error);
+
+      }
+    })
   }
 }

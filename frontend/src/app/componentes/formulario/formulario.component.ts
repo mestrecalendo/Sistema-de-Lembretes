@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Lembrete } from '../../models/novo-lembrete';
 import { LembretesService } from '../../services/lembretes.service';
+import { ListaLembretesComponent } from '../lista-lembretes/lista-lembretes.component';
+import { validatorData } from './validatorData';
 
 
 @Component({
@@ -16,7 +18,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
     this.LembreteForm = this.formBuilder.group({
       nome: ['', [Validators.required]],
-      data: ['', [Validators.required]],
+      data: ['', [Validators.required, validatorData]],
       //color: ['green', [Validators.required]],
     })
   }
@@ -29,7 +31,7 @@ export class FormularioComponent implements OnInit {
 
     this.lembretesService.cadastrarNovoLembrete(novoLembrete).subscribe({
       complete: () => {
-        console.log('OK')
+        location.reload()
       },
       error: (e: any) => {
         alert(JSON.stringify(e))

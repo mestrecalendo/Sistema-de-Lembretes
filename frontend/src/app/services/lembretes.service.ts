@@ -26,8 +26,8 @@ export class LembretesService {
     return this.http.get(`${this.url}/list`, this.httpOptions)
   }
 
-  ExcluirLembrete() {
-
+  ExcluirLembrete(id: number) {
+    return this.http.delete(`${this.url}/${id}`, this.httpOptions)
   }
 
 }
