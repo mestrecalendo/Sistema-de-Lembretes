@@ -28,12 +28,20 @@ form {
     display: none;
   }
 
+  input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+
   label {
     height: 40px;
     width: 40px;
     border-radius: 100%;
     border: 3px solid $black;
     box-shadow: 0px 4px 0px $black;
+  }
+
+  input[type=radio]:checked+label {
+    box-shadow: none !important;
   }
 
   #red+label {

@@ -1,17 +1,17 @@
-<form>
+<form [formGroup]="LembreteForm" (submit)="cadastrar()">
+  <input type="text" formControlName="nome" id="nome" placeholder="Nomeie seu Lembrete">
+  <input type="date" formControlName="data" id="data" placeholder="Insira o Dia do Lembrete">
 
-    <input type="text" name="nome" id="nome" placeholder="Nomeie seu Lembrete">
-    <input type="date" name="data" id="data" placeholder="Insira o Dia do Lembrete">
-    <fieldset>
-        <input type="radio" name="color" id="red">
-        <label for="red"></label>
+  <fieldset>
+    <input type="radio" id="red" value="red">
+    <label for="red"></label>
 
-        <input type="radio" name="color" id="yellow">
-        <label for="yellow"></label>
+    <input type="radio" id="yellow" value="yellow">
+    <label for="yellow"></label>
 
-        <input type="radio" name="color" id="green">
-        <label for="green"></label>
-    </fieldset>
-    <button type="submit">Adicionar Lembrete</button>
+    <input type="radio" id="green" value="green">
+    <label for="green"></label>
+  </fieldset>
+  <button type="submit">Adicionar Lembrete</button>
 
 </form>
