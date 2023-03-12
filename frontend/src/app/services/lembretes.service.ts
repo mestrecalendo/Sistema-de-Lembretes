@@ -18,7 +18,6 @@ export class LembretesService {
   constructor(private http: HttpClient) { }
 
   cadastrarNovoLembrete(novoLembrete: Lembrete): Observable<any> {
-    console.log(novoLembrete)
     return this.http.post(this.url, novoLembrete, this.httpOptions)
   }
 

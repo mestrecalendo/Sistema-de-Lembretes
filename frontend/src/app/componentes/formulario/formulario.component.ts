@@ -19,7 +19,7 @@ export class FormularioComponent implements OnInit {
     this.LembreteForm = this.formBuilder.group({
       nome: ['', [Validators.required]],
       data: ['', [Validators.required, validatorData]],
-      //color: ['green', [Validators.required]],
+      cor: ['#61E4C5', [Validators.required]],
     })
   }
 

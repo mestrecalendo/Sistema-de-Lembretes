@@ -6,6 +6,7 @@ import { LembretesService } from 'src/app/services/lembretes.service';
   templateUrl: './lista-lembretes.component.html',
   styleUrls: ['./lista-lembretes.component.scss']
 })
+
 export class ListaLembretesComponent implements OnInit {
   listaLembretes?: any[]
 
@@ -15,9 +16,6 @@ export class ListaLembretesComponent implements OnInit {
     this.lembretesService.ListarLembretes().subscribe({
       next: (data) => {
         this.listaLembretes = data;
-        console.log(this.listaLembretes);
-
-        //console.log("lsta", this.listaLembretes);
       },
       error: (error: any) => { }
     });
@@ -31,7 +29,6 @@ export class ListaLembretesComponent implements OnInit {
       },
       error: (error: any) => {
         console.log(error);
-
       }
     })
   }

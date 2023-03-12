@@ -25,6 +25,7 @@ public class LembreteController : Controller
         {
             Nome = lembreteDto.Nome,
             Data = lembreteDto.Data,
+            Cor = lembreteDto.Cor
         };
 
         try
@@ -61,6 +62,7 @@ public class LembreteController : Controller
         {
             Id = lembrete.Id,
             Nome = lembrete.Nome,
+            Cor = lembrete.Cor,
             Data = lembrete.Data
         };
         return Ok(lembreteDto);
@@ -75,6 +77,7 @@ public class LembreteController : Controller
         try
         {
             lembrete.Nome = lembreteDto.Nome;
+            lembrete.Cor = lembreteDto.Cor;
             lembrete.Data = lembreteDto.Data;
 
             _context.Update(lembrete);

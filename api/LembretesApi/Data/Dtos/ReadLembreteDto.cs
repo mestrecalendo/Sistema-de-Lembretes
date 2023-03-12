@@ -9,6 +9,8 @@ public class ReadLembreteDto
 
     public string Nome { get; set; }
 
+    public string Cor { get; set; }
+
     public DateTime Data { get; set; }
 
 }
