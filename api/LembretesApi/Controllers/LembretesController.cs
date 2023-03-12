@@ -44,8 +44,9 @@ public class LembreteController : Controller
     public async Task<IActionResult> ListaLembretes()
     {
         var list = await _context.Lembretes.AsNoTracking().ToListAsync();
-        var lembretes = list.OrderBy(x => x.Data).GroupBy(x => DateOnly.FromDateTime(x.Data));
-
+        var lembretes = list.OrderBy(x => x.Data).GroupBy(x => DateOnly.FromDateTime(x.Data)).ToDictionary(x => x.Key);
+     
+       
         return Ok(lembretes);
     }
 
